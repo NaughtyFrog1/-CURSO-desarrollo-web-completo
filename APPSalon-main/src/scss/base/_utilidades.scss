@@ -1,0 +1,71 @@
+/*! _utilidades.scss */
+
+.alert-box {
+  padding: $separacion-small 0;
+
+  .alert {
+    margin: 0 0 $separacion-xs;
+    text-align: center;
+    text-transform: capitalize;
+
+    &.alerta--error {
+      color: #ff4949;
+    }
+
+    &.alerta--success {
+      color: #49ff67;
+    }
+  }
+}
+
+// Containers
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container--small {
+  max-width: 900px;
+}
+
+// font-weight
+
+.fw--300 {
+  font-weight: 300;
+}
+
+.fw--400 {
+  font-weight: 400;
+}
+
+.fw--700 {
+  font-weight: 700;
+}
+
+.fw--900 {
+  font-weight: 900;
+}
+
+.m0 {
+  margin: 0;
+}
+
+.p0 {
+  padding: 0;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.33);
+  z-index: 0;
+}
+
+// text-align
+
+.ta--center {
+  text-align: center;
+}

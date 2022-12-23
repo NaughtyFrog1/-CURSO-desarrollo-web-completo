@@ -1,0 +1,66 @@
+/*! _lineup.scss */
+
+.lineup {
+  padding: $separacion 0;
+
+  .lineup__dia {
+    text-transform: uppercase;
+    margin: $separacion 0;
+  }
+}
+
+.container--escenarios {
+  @include mq-tablet {
+    @include grid-col(2, $separacion)
+  }
+}
+
+.escenario {
+  padding-top: $separacion / 2;
+
+  .escenario__nombre{
+    text-align: center;
+    font-weight: 300;
+  
+    &::after {
+      content: '';
+      display: block;
+      width: 20rem;
+      height: 10rem;
+      margin: 2rem auto 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+}
+
+.edm .escenario__nombre::after {
+  background-image: url('../img/icono_edm.png');
+}
+
+.rock .escenario__nombre::after {
+  background-image: url('../img/icono_rock.png');
+}
+
+.calendario {
+  li {
+    @include flex(flex-start, center);
+    padding: $separacion / 2;
+  }
+
+  time {
+    width: 55px;
+    border-right: 2px solid $negro;
+    padding-right: 4px;
+    margin-right: 4px;
+  }
+}
+
+.bg--verde .calendario li:nth-child(odd) {
+  background-color: darken($verde, 7);
+}
+
+.bg--amarillo .calendario li:nth-child(odd) {
+  background-color: darken($amarillo, 7);
+}

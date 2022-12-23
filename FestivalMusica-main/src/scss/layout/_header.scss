@@ -1,0 +1,39 @@
+.header {
+  .header__contenido {
+    padding: ($separacion / 2) 0;
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    @include mq-tablet {
+      @include flex(space-between, center);
+
+      h1 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.header--sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 .2rem .4rem rgba($negro, .5);
+
+  }
+}
+
+.nav-prpal {
+  display: flex;
+  gap: 2rem;
+
+  a {
+    color: $blanco;
+    font-size: 2rem;
+
+    &:hover {
+      color:$amarillo;
+    }
+  }
+}

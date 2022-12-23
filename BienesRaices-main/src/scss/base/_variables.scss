@@ -1,0 +1,64 @@
+//* BREAKPOINTS
+
+$mobile: 480px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+
+
+//* FONTS
+
+$font: 'Open Sans', sans-serif;
+$font-header: 'Raleway', sans-serif;
+
+
+:root {
+  //* COLOR
+  --black-12: hsl(0, 0%, 12%);
+  --black-16: hsl(0, 0%, 16%);
+  --black-23: hsl(0, 0%, 23%);
+
+  --white-93: hsl(0, 0%, 93%);
+  --white-86: hsl(0, 0%, 86%);
+  --white-77: hsl(0, 0%, 77%);
+
+  --success: #198754;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --info: #0dcaf0;
+
+
+  //* TYPE SCALE
+
+  --text-base: 1.6rem;
+  --text-ratio: 0.6rem;
+  --line-height: 1.25;
+
+  --text-xs: calc(var(--text-sm) - calc(var(--text-ratio) / 3));
+  --text-sm: calc(var(--text-md) - calc(var(--text-ratio) / 3));
+  --text-md: var(--text-base);
+  --text-lg: calc(var(--text-md) + var(--text-ratio));
+  --text-xl: calc(var(--text-lg) + var(--text-ratio));
+  --text-xxl: calc(var(--text-xl) + var(--text-ratio));
+  --text-xxxl: calc(var(--text-xxl) + var(--text-ratio));
+
+
+  //* SPACING SCALE
+
+  --space-base:  1rem;
+  --space-xxxxs: calc(0.125 * var(--space-base)); 
+  --space-xxxs:  calc(0.25  * var(--space-base));
+  --space-xxs:   calc(0.375 * var(--space-base));
+  --space-xs:    calc(0.5   * var(--space-base));
+  --space-sm:    calc(0.75  * var(--space-base));
+  --space-md:    calc(1.25  * var(--space-base));
+  --space-lg:    calc(2     * var(--space-base));
+  --space-xl:    calc(3.25  * var(--space-base));
+  --space-xxl:   calc(5.25  * var(--space-base));
+  --space-xxxl:  calc(8.5   * var(--space-base));
+  --space-xxxxl: calc(13.75 * var(--space-base));
+
+  @include breakpoint-laptop {
+    --space-base: 1.25rem;
+  }
+}

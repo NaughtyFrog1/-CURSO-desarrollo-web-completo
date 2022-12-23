@@ -1,0 +1,57 @@
+/*! _variables.scss */
+
+// Colores
+$verde: #4cb8b3;
+$rosa: #f53756;
+$amarillo: #fef46d;
+$morado: #752f97;
+$negro: #000;
+$blanco: #fff;
+
+// Media Queries
+$mobile: 480px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1200px;
+
+// Fuentes
+$fuente: "Montserrat", sans-serif;
+
+// Separaciones
+$separacion: 5rem;
+
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin grid-col($columnas, $espacio) {
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  gap: $espacio;
+}
+
+@mixin mq-mobile {
+  @media (min-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin mq-tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mq-laptop {
+  @media (min-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin mq-desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}

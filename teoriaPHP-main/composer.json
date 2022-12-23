@@ -1,0 +1,17 @@
+{
+    "name": "nwtf/teoria-php",
+    "description": "Teoría sobre conceptos básicos de PHP",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Manuel Silenzi",
+            "email": "manuelsilenzi1@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "./POO/Clases"
+        }
+    } 
+}

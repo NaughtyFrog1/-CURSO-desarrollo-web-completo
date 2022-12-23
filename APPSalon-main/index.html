@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sitio oficial de BarberShop, la mejor peluqueria del país. Desde aquí puedes hacer tus reservaciones"
+    />
+    <title>App Salón de Belleza</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a004f94d5a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="build/css/app.min.css" />
+  </head>
+  <body>
+    <header class="inicio" id="inicio">
+      <div class="overlay"></div>
+      <div class="container inicio__contenido">
+        <div class="inicio__logo">
+          <h1 class="logo__nombre m0">Barber Shop</h1>
+          <p class="logo__slogan m0">Make your own style</p>
+        </div>
+        <button
+          class="btn btn--flecha btn--inicio"
+          type="button"
+          id="btn-inicio"
+        >
+          Pedir un turno <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </header>
+
+    <section class="side-panel side-panel--servicios" id="servicios">
+      <div class="side-panel__tipo">
+        <p class="m0">Servicios</p>
+      </div>
+      <div class="side-panel__content container--small">
+        <div class="content__main">
+          <h2 class="content__titulo">Lista de servicios</h2>
+          <p class="content__frase">
+            A continuación elige los servicios que desees
+          </p>
+          <div class="servicios__listado"></div>
+        </div>
+        <div class="content__botones">
+          <button
+            class="btn btn--secundario"
+            type="button"
+            id="btn-servicios-atras"
+          >
+            Anterior
+          </button>
+          <button
+            class="btn btn--flecha btn--siguiente"
+            type="button"
+            id="btn-servicios"
+          >
+            Siguiente <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="side-panel side-panel--info" id="info">
+      <div class="side-panel__tipo">
+        <p class="m0">Información</p>
+      </div>
+      <div class="side-panel__content container--small">
+        <div class="content__main">
+          <h2 class="content__titulo">Información del turno</h2>
+          <p class="content__frase">Coloca tus datos y fecha de cita</p>
+          <form action="" class="form-info">
+            <fieldset>
+              <legend>Información de contacto</legend>
+              <div class="campos">
+                <div class="campo">
+                  <label for="nombre">Nombre</label>
+                  <input type="text" id="nombre" placeholder="Tu nombre" />
+                </div>
+                <div class="campo">
+                  <label for="apellido">Apellido</label>
+                  <input type="text" id="apellido" placeholder="Tu apellido" />
+                </div>
+              </div>
+              <div class="campos">
+                <div class="campo">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" placeholder="Tu email" />
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Información de reservacion</legend>
+              <div class="campos">
+                <div class="campo">
+                  <label for="fechaDia">Fecha</label>
+                  <div class="input--tres">
+                    <select id="fechaDia">
+                      <option disabled selected value="">Día</option>
+                    </select>
+                    <select id="fechaMes">
+                      <option disabled selected value="">Mes</option>
+                    </select>
+                    <select id="fechaAño">
+                      <option disabled selected value="">Año</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="campo">
+                  <label for="horaHora">Horario</label>
+                  <div class="input--tres">
+                    <select id="horaHora">
+                      <option disabled selected value="">HH</option>
+                      <optgroup label="Mañana"></optgroup>
+                      <optgroup label="Tarde"></optgroup>
+                    </select>
+                    <select id="horaMinutos">
+                      <option disabled selected value="">mm</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+          <p class="ta--center">
+            El horario es de lunes a viernes de 8 a 12hs y de 15 a 19hs
+          </p>
+        </div>
+        <div class="content__botones">
+          <button class="btn btn--secundario" type="button" id="btn-info-atras">
+            Anterior
+          </button>
+          <button
+            class="btn btn--flecha btn--siguiente"
+            type="button"
+            id="btn-info"
+          >
+            Siguiente <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="side-panel side-panel--resumen" id="resumen">
+      <div class="side-panel__tipo">
+        <p class="m0">Resumen</p>
+      </div>
+      <div class="side-panel__content container--small">
+        <div class="content__main">
+          <h2 class="content__titulo">Resumen</h2>
+          <p class="content__frase">
+            Revise que todos los datos sean correctos
+          </p>
+          <!-- contenido -->
+        </div>
+        <div class="content__botones">
+          <button
+            class="btn btn--secundario"
+            type="button"
+            id="btn-resumen-atras"
+          >
+            Anterior
+          </button>
+          <button
+            class="btn btn--flecha btn--siguiente"
+            type="button"
+            id="btn-resumen"
+          >
+            Siguiente <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script src="build/js/bundle.min.js"></script>
+  </body>
+</html>

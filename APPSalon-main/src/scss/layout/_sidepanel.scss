@@ -1,0 +1,64 @@
+.side-panel {
+  display: grid;
+  grid-template-columns: var(--panel-border) 1fr;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  transition: $panel-slip-time transform;
+  padding: var(--panel-border);
+  padding-left: 0;
+  background-color: lighten($negro, 5);
+  box-shadow: 0 -8px 6px rgba($negro, 0.75);
+
+  .side-panel__tipo {
+    @include flex(center, center);
+    user-select: none;
+
+    p {
+      writing-mode: vertical-lr;
+      text-transform: uppercase;
+      color: darken($blanco, 60);
+      font-size: 1.4rem;
+      letter-spacing: 0.75rem;
+    }
+  }
+
+  .container {
+    margin-left: 0;
+  }
+}
+
+.side-panel__content {
+  height: calc(100vh - var(--panel-border) * 2);
+  margin: auto 0;
+
+  @include flex(space-between, flex-start);
+  flex-direction: column;
+
+  .content__titulo {
+    margin: 0;
+    font-size: 5.2rem;
+    letter-spacing: 0.2rem;
+    text-shadow: 0 2px 1px rgba($negro, 0.75),
+      0 4px 2px rgba($negro, 0.5);
+  }
+
+  .content__frase {
+    margin: 0 0 $separacion;
+    font-size: 2rem;
+    color: $gris;
+  }
+
+  .content__main {
+    overflow: hidden auto;
+  }
+}
+
+.content__botones {
+  @include flex(flex-end, center);
+  gap: 0.8rem;
+  width: 100%;
+  margin-top: $separacion-small;
+}

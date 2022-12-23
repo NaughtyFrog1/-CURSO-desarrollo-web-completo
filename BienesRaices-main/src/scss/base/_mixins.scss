@@ -1,0 +1,50 @@
+//* BREAKPOINTS
+
+@mixin breakpoint-mobile {
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-laptop {
+  @media (min-width: #{$laptop}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin breakpoint($min) {
+  @media (min-width: $min) {
+    @content;
+  }
+}
+
+
+@mixin relief-content($hover: true) {
+  background-color: #fff;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15),
+              0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+
+  @if $hover {
+    position: relative;
+    transition: all 0.3s linear 0s;
+    z-index: 0;
+
+    &:hover {
+      box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15),
+                  0px 18px 48px -6px rgba(0, 0, 0, 0.15);
+      z-index: 1;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.btn {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: var(--space-md);
+  outline: 0;
+  padding: var(--space-md) var(--space-xl);
+  text-align: center;
+  transition: box-shadow .3s linear;
+}
+
+.btn--primario {
+  background-color: var(--black-12);
+  color: var(--white-93);
+  box-shadow: 0px 2px  2px 0px rgba(0, 0, 0, .3),
+              0px 6px 8px -2px rgba(0, 0, 0, 0);
+
+  &:hover {
+    box-shadow: 0px 2px  2px 0px rgba(0, 0, 0, .3),
+                0px 6px 8px -2px rgba(0, 0, 0, .3);
+  }
+}
+
+.btn--secundario {
+  background-color: #fff;
+  color: var(--black-12);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, .15),
+              0px 0px 0px 0px rgba(0, 0, 0, .1);
+
+  &:hover {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, .15),
+                0px 6px 8px -2px rgba(0, 0, 0, .1);
+  }
+}
+
+.btn--block {
+  display: block;
+}
+
+.btn--sm {
+  font-size: var(--text-sm);
+  padding: var(--space-sm) var(--space-lg);
+}

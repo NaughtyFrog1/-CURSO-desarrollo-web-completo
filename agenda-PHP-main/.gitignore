@@ -1,0 +1,13 @@
+# SCSS
+
+.sass-cache/
+# Compiled SCSS
+styles.min.css
+*.css.map
+*.sass.map
+*.scss.map
+
+
+# Secure
+
+inc/functions/db_conn.php

@@ -1,0 +1,32 @@
+.container-alert--success,
+.container-alert--error {
+  margin: var(--space-lg) 0;
+  padding: var(--space-md);
+}
+
+.container-alert--error {
+  background-color: rgba(#dc3545, 0.2);
+  box-shadow: 0 8px 12px 0 rgba(78, 9, 16, 0.1);
+}
+
+.container-alert--success {
+  background-color: rgba(#198754, 0.2);
+  box-shadow: 0 8px 12px 0 rgba(6, 65, 35, 0.1);
+}
+
+.container-alert--php {
+  margin-bottom: var(--space-xl);
+}
+
+.alert {
+  text-align: center;
+  margin: var(--space-sm) 0;
+}
+
+.alert--error {
+  color: var(--danger);
+}
+
+.alert--success {
+  color: var(--success);
+}

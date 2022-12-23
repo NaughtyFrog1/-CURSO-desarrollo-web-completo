@@ -1,0 +1,56 @@
+/*! _variables.scss */
+
+// Fuentes
+$fuente: 'Montserrat', sans-serif;
+$fuente-titulos: 'Bebas Neue', cursive;
+
+// Tamaño de Media Queries
+$mobile: 480px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1200px;
+
+//Colores
+$primario: #593527;
+$primario--claro: #f28f6b;
+$primario--oscuro: #391e14;
+
+$secundario: #28a68d;
+$secundario--claro: #83f2dc;
+$secundario--oscuro: #1c7361;
+
+$negro: #111111;
+$blanco: #f2f2f2;
+$gris: #cccccc;
+
+// Separaciones
+$separacion: 5rem;
+$separacion-small: $separacion / 2;
+$separacion-xs: $separacion / 4;
+
+$panel-slip-time: 0.8s;
+
+:root {
+  // El valor de estas variables pueden cambiar mientras el
+  // usuario este en el sitio, por lo que usamos las
+  // variables de CSS.
+  // La funcion min() esta escrita como Min() para usar la
+  // funcion de CSS y no la de SASS. CSS no es case
+  // sensitive a diferencia de SASS
+  --panel-border: Min(8vw, 5rem);
+  --panel-width--servicios: calc(
+    100vw - var(--panel-border)
+  );
+  --panel-width--info: calc(
+    100vw - var(--panel-border) * 2
+  );
+  --panel-width--resumen: calc(
+    100vw - var(--panel-border) * 3
+  );
+}
+
+// Fuentes
+$delgada: 300;
+$regular: 400;
+$bold: 700;
+$black: 900;

@@ -1,0 +1,43 @@
+.site__header {
+  position: relative;
+  
+  // Fix slide position bug
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &::after {
+    background-color: rgba(0, 0, 0, .5);
+  }
+
+  .header__title {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    display: block;
+    width: Min(450px, 90%);
+    margin: 0;
+    font-weight: 300;
+    color: var(--white-93);
+    font-size: var(--text-xxl);
+  }
+
+  .header__glide {
+    position: relative;
+    z-index: -1;
+  }
+
+  picture img {
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+  }
+}

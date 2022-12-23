@@ -1,0 +1,104 @@
+.blog-testimoniales {
+  @include breakpoint-laptop {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+.blog__entrada {
+  margin-bottom: var(--space-lg);
+  @include relief-content;
+}
+
+.entrada__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.entrada__img-container {
+  position: relative;
+  height: 200px;
+}
+
+.entrada__img img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.entrada__desc {
+  padding: var(--space-md);
+  color: var(--black-12);
+  flex-basis: 40%;
+}
+
+.entrada__titulo {
+  text-align: left;
+  margin: 0 0 var(--space-xs) 0;
+}
+
+.entrada__meta {
+  margin-top: 0;
+  color: var(--black-23);
+  font-size: var(--text-sm);
+
+  time,
+  span {
+    font-style: italic;
+  }
+}
+
+.entrada__resumen {
+  line-height: 1.8;
+}
+
+@media (min-width: 640px) {
+  .entrada__content {
+    flex-direction: row;
+  }
+
+  .entrada__img-container {
+    flex-basis: 40%;
+    height: auto;
+  }
+
+  .entrada__desc {
+    flex-basis: 60%;
+  }
+}
+
+.testimonial {
+  padding: var(--space-lg);
+  position: relative;
+  @include relief-content(false);
+
+  &::before {
+    position: absolute;
+    top: var(--space-md);
+    left: var(--space-lg);
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-image: url('../images/icons/comilla.svg');
+    background-position: center center;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 0;
+  }
+
+  blockquote {
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+  }
+
+  p {
+    text-align-last: right;
+    color: var(--black-23);
+  }
+}

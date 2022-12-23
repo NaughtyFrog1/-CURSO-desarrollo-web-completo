@@ -1,0 +1,27 @@
+@import '../../node_modules/normalize-scss/sass/normalize';
+@include normalize();
+
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.core.scss";
+
+@import 'base/mixins';
+@import 'base/variables';
+@import 'base/globals';
+@import 'base/keyframes';
+@import 'base/utilities';
+@import 'base/buttons';
+
+@import 'components/alert';
+@import 'components/navbar';
+@import 'components/footer';
+@import 'components/sobre-nosotros';
+@import 'components/venta';
+@import 'components/blog-testimoniales';
+@import 'components/form';
+
+@import 'layout/site-header';
+@import 'layout/contactar';
+@import 'layout/nosotros';
+@import 'layout/blog-entrada';
+@import 'layout/form-contacto';
+@import 'layout/admin';
+@import 'layout/anuncio';

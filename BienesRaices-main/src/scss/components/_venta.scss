@@ -1,0 +1,129 @@
+.venta__lista {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+
+  @include breakpoint-tablet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.venta__card {
+  position: relative;
+  display: block;
+  height: 470px;
+  transition: all 0.3s linear 0s;
+
+  @include relief-content;
+
+  &:hover {
+    .card__img { 
+      img {
+        transform: scale(1.1);
+        opacity: 0.6;
+      }
+    }
+
+    .card__detalles {
+      height: var(--detalles-height);
+    }
+  }
+}
+
+.card__img {
+  background-color: #000;
+  height: 300px;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    transition: all 0.3s linear 0s;
+  }
+}
+
+.card__content {
+  position: absolute;
+  bottom: 0;
+  background-color: #fff;
+  width: 100%;
+  padding: var(--space-lg);
+  transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05);
+}
+
+.card__ubicacion {
+  position: absolute;
+  top: -22px;
+  left: 0;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--black-12);
+  color: var(--white-93);
+  font-size: var(--text-sm);
+  font-family: $font-header;
+  letter-spacing: 1px;
+}
+
+.card__titulo {
+  margin: 0;
+  padding: 0 0 var(--space-sm);
+  font-size: var(--text-xl);
+  font-family: $font-header;
+  color: var(--black-12);
+}
+
+.card__precio {
+  margin: 0;
+  padding: 0 0 var(--space-lg);
+  font-size: var(--text-lg);
+  color: var(--black-16);
+}
+
+.card__detalles {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  color: var(--black-16);
+  transition: all 0.3s linear 0s;
+}
+
+.card__desc {
+  margin: 0 0 var(--space-md);
+  font-size: var(--text-sm);
+  line-height: 1.8;  
+}
+
+.card__caract {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+      font-size: var(--text-lg);
+      margin-right: var(--space-xs);
+    }
+  }
+}
+
+.card__footer {
+  margin-top: var(--space-xl);
+  color: var(--black-23);
+
+  p {
+    font-size: var(--text-sm);
+    margin: 0;
+  }
+}
+
+.venta__ver-mas {
+  display: flex;
+  justify-content: flex-end;
+}

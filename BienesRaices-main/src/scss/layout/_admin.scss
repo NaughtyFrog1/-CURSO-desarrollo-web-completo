@@ -1,0 +1,67 @@
+.table-container {
+  overflow-x: auto;
+  margin-top: var(--space-xl);
+  
+  @include relief-content(false);
+}
+
+.propiedades {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+
+  th, td {
+    padding: var(--space-md);
+    border-bottom: 1px solid var(--white-86);
+  }
+
+  tr:last-of-type {
+    td {
+      border: none;
+    }
+  }
+}
+
+.propiedad .propiedad__imagen {
+  border-bottom: 0;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  
+  img {
+    display: block;
+  }
+}
+
+.propiedad__acciones {
+  width: 120px;
+  
+  .acciones__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .propiedad__accion {
+    margin: 0;
+    
+    input[type="submit"],
+    img {
+      width: var(--text-lg);
+      height: var(--text-lg);
+    }
+
+    input[type="submit"] {
+      background: url('../images/icons/trash.svg');
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+  }
+}
+
+.form__vista-previa {
+  display: block;
+  max-height: 200px;
+  margin: 0 auto var(--space-xl);
+}

@@ -1,0 +1,54 @@
+/*! _boletos.scss */
+
+.boletos {
+  padding: $separacion 0;
+}
+
+.container--boletos {
+  margin-top: $separacion / 2;
+  @include grid-col(2, $separacion);
+}
+
+table.pase {
+  width: 100%;
+  border-spacing: 0;
+
+  thead th,
+  tbody td,
+  tfoot td {
+    padding: $separacion / 4;
+  }
+
+
+  thead {
+    background-color: $rosa;
+
+    th {
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 2rem;
+      color: $blanco;
+    }
+  }
+
+  tbody {
+    background-color: $blanco;
+
+    tr:not(:last-of-type) {
+      td {
+        border-bottom: 1px solid #e1e1e1;
+      }
+    }
+  }
+
+  tfoot{
+    background-color: $morado;
+    
+    td {
+      text-align: center;
+      font-size: 3rem;
+      color: $blanco;
+      font-weight: 300;
+    }
+  }
+}

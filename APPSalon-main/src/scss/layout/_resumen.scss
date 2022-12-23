@@ -1,0 +1,55 @@
+/* _resumen.scss */
+
+.side-panel--resumen {
+  width: var(--panel-width--resumen);
+  transform: translateX(var(--panel-width--resumen));
+}
+
+.resumen__content {
+  color: $blanco;
+}
+
+.resumen__dato {
+  @include flex(center, flex-start);
+  flex-direction: column;
+  margin: 0 0 $separacion-small;
+  span {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: $gris;
+    margin-bottom: 0.6rem;
+  }
+
+  @include mq-tablet {
+    font-size: 2.2rem;
+  }
+}
+
+.resumen__servicio {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  margin-bottom: $separacion-xs;
+  font-size: 1.4rem;
+
+  .resumen__servicio__precio {
+    color: $gris;
+  }
+
+  @include mq-tablet {
+    font-size: 2rem;
+  }
+}
+
+.resumen__total {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: $fuente-titulos;
+
+  .total__precio {
+    color: $gris;
+  }
+
+  @include mq-tablet {
+    font-size: 3rem;
+  }
+}

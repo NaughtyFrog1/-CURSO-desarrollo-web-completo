@@ -1,0 +1,81 @@
+/*! _info.scss */
+
+.side-panel--info {
+  width: var(--panel-width--info);
+  transform: translateX(var(--panel-width--info));
+}
+
+.form-info {
+  @include mq-tablet {
+    .campos {
+      @include grid-col(2, $separacion-small);
+      margin-bottom: $separacion-small;
+    }
+
+    .campo {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      gap: $separacion-xs;
+      align-items: center;
+
+      label {
+        justify-self: flex-start;
+      }
+
+      .input--tres {
+        @include grid-col(3, $separacion-xs);
+      }
+    }
+  }
+
+  fieldset {
+    margin: 0 0 $separacion-small;
+    padding: 0;
+    border: 0;
+
+    legend {
+      color: $blanco;
+      font-size: 2rem;
+      margin-bottom: $separacion-small;
+    }
+  }
+
+  label {
+    display: block;
+    padding-bottom: $separacion-xs;
+    color: $blanco;
+
+    @include mq-tablet {
+      padding-bottom: 0;
+    }
+  }
+
+  input,
+  select {
+    outline: none;
+    border: none;
+    background-color: lighten($negro, 7);
+    color: $blanco;
+    padding: $separacion-xs;
+    box-shadow: 0 2px 1px 0 rgba($negro, 0.3);
+    border-radius: 0.6rem;
+    margin-bottom: $separacion-small;
+    transition: 0.2s ease-in-out;
+    transition-property: box-shadow background-color;
+
+    &:hover {
+      box-shadow: 0 2px 1px 0 rgba($negro, 0.3),
+        0 6px 4px 0 rgba($negro, 0.3);
+    }
+
+    &:focus {
+      background-color: lighten($negro, 14);
+      box-shadow: 0 2px 1px 0 rgba($negro, 0.3),
+        0 8px 4px 0 rgba($negro, 0.3);
+    }
+
+    @include mq-tablet {
+      margin-bottom: 0;
+    }
+  }
+}

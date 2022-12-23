@@ -1,0 +1,21 @@
+/*! _galeria.scss */
+
+.galeria {
+  padding: $separacion 0;
+}
+
+.galeria__imagenes {
+  li img {
+      width: 100%
+  }
+
+  @include grid-col(2, $separacion / 2);
+
+  @include mq-tablet {
+    @include grid-col(4, $separacion / 2);
+  }
+
+  @include mq-desktop {
+    @include grid-col(6, $separacion / 2);
+  }
+}

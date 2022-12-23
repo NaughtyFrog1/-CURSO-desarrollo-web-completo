@@ -1,0 +1,21 @@
+.form--contacto {
+  .form__fieldset {
+    &:first-of-type {
+      margin-top: calc(var(--space-xl) * -1);
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+@include breakpoint-tablet {
+  .contacto__presupuesto {
+    display: flex;
+    justify-content: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .contacto__input-pres {
+    flex-grow: 1;
+  }
+}

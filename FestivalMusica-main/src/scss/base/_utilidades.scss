@@ -1,0 +1,120 @@
+/*! _utilidades.scss */
+
+
+// background-color
+
+.bg--amarillo {
+  background-color: $amarillo;
+}
+
+.bg--morado {
+  background-color: $morado;
+}
+
+.bg--rosa {
+  background-color: $rosa;
+}
+
+.bg--verde {
+  background-color: $verde;
+}
+
+
+// color
+
+.color--blanco {
+  color: $blanco;
+}
+
+.color--rosa {
+  color: $rosa;
+}
+
+
+// Containers
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+// font-size
+
+
+.fz--1-large {
+  font-size: 1.6rem;
+}
+
+.fz--2 {
+  font-size: 2rem;
+}
+
+.fz--2-medium {
+  font-size: 2.4rem;
+}
+
+
+// font-weight
+
+.fw--300 {
+  font-weight: 300;
+}
+
+.fw--400 {
+  font-weight: 400;
+}
+
+.fw--700 {
+  font-weight: 700;
+}
+
+.fw--900  {
+  font-weight: 900;
+}
+
+
+.m0 {
+  margin: 0;
+}
+
+
+.no-scroll {
+  overflow: hidden;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  background-color: rgba($negro, 0.75);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+
+.p0 {
+  padding: 0;
+}
+
+.p-vertical--small {
+  padding: $separacion / 2 0;
+}
+
+
+// text-align
+
+.ta--center {
+  text-align: center;
+}
+
+.ta--left {
+  text-align-last: left;
+}
+
+.ta--right {
+  text-align: right;
+}

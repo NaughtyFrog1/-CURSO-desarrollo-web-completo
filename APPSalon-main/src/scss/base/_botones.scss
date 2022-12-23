@@ -1,0 +1,92 @@
+/*! _botones.scss */
+
+// Botones
+
+.btn {
+  padding: 1.8rem 2.4rem;
+  border-radius: 1rem;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 1px 0 rgba($negro, 0.3);
+
+  transition: 0.2s ease-in-out box-shadow;
+
+  &:hover {
+    box-shadow: 0 2px 1px 0 rgba($negro, 0.3),
+      0 6px 4px 0 rgba($negro, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 1px 0 0 rgba($negro, 0.3),
+      0 2px 1px 0 rgba($negro, 0.1);
+  }
+}
+
+.btn--flecha {
+  display: flex;
+  align-items: center;
+
+  i {
+    margin-left: 0.8rem;
+    opacity: 0.8;
+  }
+
+  &:hover {
+    i {
+      animation-name: moverIzqDer;
+      animation-delay: 0.2s;
+      animation-iteration-count: infinite;
+      animation-duration: 1.5s;
+    }
+  }
+}
+
+.btn--inicio {
+  border-radius: 500px;
+  background-color: #593527;
+  color: $blanco;
+  box-shadow: 0 4px 2px 0 rgba($negro, 0.5),
+    0 8px 4px rgba($negro, 0);
+
+  i {
+    margin-left: -0.8rem;
+    opacity: 0;
+    transition: 0.25s ease-in-out;
+    transition-delay: 0.22s;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 2px 0 rgba($negro, 0.5),
+      0 12px 8px rgba($negro, 0.4);
+    i {
+      margin-left: 0.8rem;
+      opacity: 0.8;
+    }
+  }
+
+  &:active {
+    box-shadow: 0 2px 1px 0 rgba($negro, 0.5);
+  }
+}
+
+.btn--siguiente {
+  background-color: lighten($negro, 7);
+  color: $blanco;
+}
+
+.btn--secundario {
+  padding: 1rem;
+  background-color: transparent;
+  color: $blanco;
+  box-shadow: none;
+
+  &:hover {
+    box-shadow: none;
+    color: lighten($blanco, 15);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}

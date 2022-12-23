@@ -1,0 +1,17 @@
+.anuncio__ubicacion {
+  font-size: var(--text-lg);
+  font-family: $font-header;
+  margin: var(--space-sm) 0 0;
+}
+
+.anuncio__detalles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.anuncio__descripcion {
+  font-style: italic;
+  margin: var(--space-md) 0 var(--space-lg);
+  line-height: 1.6;
+}

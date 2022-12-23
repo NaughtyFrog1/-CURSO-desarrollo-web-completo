@@ -1,0 +1,32 @@
+.nosotros__item {
+  .item__img img {
+    width: 100%;
+    max-height: 25vh;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  @include breakpoint-tablet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-xl);
+
+    .item__img {
+      flex-basis: 40%;
+
+      img {
+        max-height: none;
+      }
+    }
+
+    .item__texto {
+      flex-basis: 60%;
+    }
+  }
+
+  &:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+}

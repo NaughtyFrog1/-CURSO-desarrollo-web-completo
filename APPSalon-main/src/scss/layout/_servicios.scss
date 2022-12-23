@@ -1,0 +1,62 @@
+/*! _servicios.scss */
+
+.side-panel--servicios {
+  width: var(--panel-width--servicios);
+  transform: translateX(var(--panel-width--servicios));
+}
+
+.servicios__listado {
+  @include grid-col(1, $separacion-small);
+
+  @include mq-mobile {
+    @include grid-col(2, $separacion-small);
+  }
+
+  @include mq-tablet {
+    @include grid-col(3, $separacion-small);
+  }
+
+  @include mq-laptop {
+    @include grid-col(4, $separacion-small);
+  }
+}
+
+.servicio {
+  background-color: lighten($negro, 7);
+  border-radius: 1rem;
+  padding: $separacion-small;
+  transition: 0.2s ease-in-out;
+  transition-property: box-shadow, background-color;
+  box-shadow: 0 2px 1px 0 rgba($negro, 0.3);
+
+  @include flex(space-between, flex-start);
+  flex-direction: column;
+
+  p {
+    margin: 0;
+  }
+
+  .servicio__precio {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: $separacion-xs;
+    text-shadow: 0 2px 1px $negro;
+  }
+
+  &:hover {
+    box-shadow: 0 2px 1px 0 rgba($negro, 0.3),
+      0 8px 6px 0 rgba($negro, 0.3);
+    z-index: 1;
+  }
+}
+
+.servicio--seleccionado {
+  background-color: lighten($negro, 14);
+  box-shadow: 0 4px 2px 0 rgba($negro, 0.3),
+    0 12px 8px 0 rgba($negro, 0.3);
+
+  &:hover {
+    box-shadow: 0 4px 2px 0 rgba($negro, 0.3),
+      0 16px 12px 0 rgba($negro, 0.3);
+  }
+}

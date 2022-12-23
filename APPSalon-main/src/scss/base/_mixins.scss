@@ -1,0 +1,41 @@
+/*! _mixins.scss */
+
+// Media queries
+
+@mixin mq-mobile {
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin mq-tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mq-laptop {
+  @media (min-width: #{$laptop}) {
+    @content;
+  }
+}
+
+@mixin mq-desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+// Display
+
+@mixin grid-col($columnas, $espacio) {
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  gap: $espacio;
+}
+
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
